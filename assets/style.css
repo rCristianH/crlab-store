@@ -169,4 +169,13 @@ nav {
   .arrow {
     display: none;
   }
+  .desktop-menu{
+    display: none;
+  }
+}
+
+@media (min-width: 641px){
+  .mobile-menu{
+    display: none;
+  }
 }
