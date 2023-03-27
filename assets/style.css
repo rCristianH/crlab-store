@@ -64,7 +64,6 @@ nav {
   color: var(--very-light-pink);
   font-size: var(--sm);
   cursor: pointer;
-
 }
 .arrow {
   margin-left: 10px;
@@ -154,11 +153,7 @@ nav {
   font-weight: 300;
 }
 .mobile-menu .sign-out {
-    color: var(--hospital-green)
-}
-.log{
-    position: absolute;
-    bottom: 0;
+  color: var(--hospital-green);
 }
 
 
