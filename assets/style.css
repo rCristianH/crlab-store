@@ -30,6 +30,7 @@ nav {
 }
 .logo {
   width: 100px;
+  margin-right: 10px;
 }
 .navbar-left {
   display: flex;
@@ -128,10 +129,14 @@ nav {
 }
 /* Menu en mobile */
 .mobile-menu {
+  box-sizing: border-box;
   background-color: var(--white);
   padding: 24px;
   position: absolute;
   top: 61px;
+  left: 0;
+  width: calc(100% - 24px);
+
 }
 .mobile-menu a {
   text-decoration: none;
@@ -230,9 +235,9 @@ nav {
   font-weight: bolds;
 }
 /* Aside Mas info productos */
-
-
-
+.more-product-detail{
+  padding: 0 0;
+}
 .product-detail-close {
   background: var(--white);
   border-radius: 50%;
@@ -286,8 +291,8 @@ nav {
   border-radius: 50%;
   display: inline-block;
 }
-.dots span:nth-child(1){
-    background-color: var(--hospital-green);
+.dots span:nth-child(1) {
+  background-color: var(--hospital-green);
 }
 .primary-button {
   background-color: var(--hospital-green);
@@ -305,7 +310,6 @@ nav {
   align-items: center;
   justify-content: center;
 }
-
 
 /* Contendor de productos */
 
@@ -351,7 +355,7 @@ nav {
   color: var(--very-light-pink);
 }
 
-/* nav */
+/* nav  800*/
 @media (max-width: 640px) {
   .menu {
     display: block;
