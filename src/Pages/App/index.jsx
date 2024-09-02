@@ -1,7 +1,10 @@
+import { Home } from "../Home";
+
 function App() {
   return (
     <>
       <div className="bg-red-100">Hello World, little friend</div>
+      <Home/>
     </>
   );
 }
@@ -22,4 +25,4 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-export default App;
+export { App };
