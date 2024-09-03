@@ -1,28 +1,15 @@
-import { Home } from "../Home";
+import { BrowserRouter } from 'react-router-dom';
+import { serviceWorker } from '../../Utils/SW';
+import { AppRoutes } from '../../Routes/AppRoutes';
 
-function App() {
+const App = () => {
   return (
-    <>
-      <div className="bg-red-100">Hello World, little friend</div>
-      <Home/>
-    </>
+    <BrowserRouter>
+      <AppRoutes/>
+    </BrowserRouter>
   );
-}
+};
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () {
-    navigator.serviceWorker.register('../sw.js').then(
-      function (registration) {
-        console.log(
-          'ServiceWorker registration successful with scope: ',
-          registration.scope,
-        );
-      },
-      function (err) {
-        console.log('ServiceWorker registration failed: ', err);
-      },
-    );
-  });
-}
+serviceWorker();
 
 export { App };
