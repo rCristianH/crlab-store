@@ -16,7 +16,7 @@ const Card = (data) => {
         <MdAdd className="absolute top-0 right-0 bg-white w-6 h-6 rounded-full m-2 p-1" />
       </figure>
       <p className="flex justify-between m-2">
-        <span className="text-sm font-light">{title}</span>
+        <span className="text-sm font-light overflow-hidden h-10">{title}</span>
         <span className="text-lg font-bold">${price}</span>
       </p>
     </div>
