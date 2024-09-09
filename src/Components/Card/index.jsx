@@ -1,7 +1,10 @@
+import { useContext } from 'react';
 import { MdAdd } from 'react-icons/md';
+import { ShoppingCartContext } from '../../Context';
 
 const Card = (data) => {
   const { id, title, price, description, category, image } = data.data;
+  const context = useContext(ShoppingCartContext);
   return (
     <div className="bg-white cursor-pointer w-56 aspect-[3/4] rounded-lg border-2 border-gray-900">
       <figure className="relative mb-2 w-full h-4/5 p-2">
@@ -13,7 +16,10 @@ const Card = (data) => {
           src={image}
           alt={description}
         />
-        <MdAdd className="absolute top-0 right-0 bg-white w-6 h-6 rounded-full m-2 p-1" />
+        <MdAdd
+          onClick={() => context.setCount(context.count + 1)}
+          className="absolute top-0 right-0 bg-white w-6 h-6 rounded-full m-2 p-1"
+        />
       </figure>
       <p className="flex justify-between m-2">
         <span className="text-sm font-light overflow-hidden h-10">{title}</span>

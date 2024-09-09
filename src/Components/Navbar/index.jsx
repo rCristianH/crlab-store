@@ -1,8 +1,11 @@
 import { MdOutlineShoppingCart, MdLogoDev } from 'react-icons/md';
 import { NavbarItem } from '../NavbarItem/NavbarItem';
 import { NavLink } from 'react-router-dom';
+import { useContext } from 'react';
+import { ShoppingCartContext } from '../../Context';
 
 const Navbar = () => {
+  const context = useContext(ShoppingCartContext);
   const activeStyle = 'underline underline-offset-4 decoration-green-700';
 
   return (
@@ -44,7 +47,7 @@ const Navbar = () => {
       </ul>
 
       <ul className="flex items-center gap-4">
-        <li className='text-lg'>
+        <li className="text-lg">
           <MdLogoDev />
         </li>
         <li>
@@ -63,7 +66,7 @@ const Navbar = () => {
           </NavbarItem>
         </li>
         <li>
-          <MdOutlineShoppingCart />
+          <MdOutlineShoppingCart /> {context.count}
         </li>
       </ul>
     </nav>
