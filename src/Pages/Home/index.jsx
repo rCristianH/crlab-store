@@ -1,6 +1,6 @@
 import { Card } from '../../Components/Card';
 import { Layout } from '../../Components/Layout';
-import { useFetchProducts } from '../../service/useService';
+import { useFetchProducts } from '../../Service/useService';
 
 const Home = () => {
   const items = useFetchProducts();
