@@ -1,2 +1,2 @@
-const API_URL = 'https://api.escuelajs.co/api/v1';
+const API_URL = 'https://fakestoreapi.com';
 export { API_URL };
