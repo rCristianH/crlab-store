@@ -13,7 +13,7 @@ const Card = (data) => {
 
   return (
     <div
-      className="bg-white cursor-pointer w-56 aspect-[3/4] rounded-lg border-2 border-gray-900"
+      className="bg-white cursor-pointer w-56 aspect-[3/4] rounded-lg border-2 border-gray-900 mb-4"
       onClick={() => showProduct(data.data)}
     >
       <figure className="relative flex items-center justify-center mb-2 w-full h-4/5 p-2">
