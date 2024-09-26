@@ -3,10 +3,13 @@ import { MdAdd } from 'react-icons/md';
 import { ShoppingCartContext } from '../../Context';
 
 const Card = (data) => {
+  const {openProductDetail, setCount, count} = useContext(ShoppingCartContext);
   const { id, title, price, description, category, image } = data.data;
-  const context = useContext(ShoppingCartContext);
+
   return (
-    <div className="bg-white cursor-pointer w-56 aspect-[3/4] rounded-lg border-2 border-gray-900">
+    <div className="bg-white cursor-pointer w-56 aspect-[3/4] rounded-lg border-2 border-gray-900"
+    onClick={()=>openProductDetail()}
+    >
       <figure className="relative mb-2 w-full h-4/5 p-2">
         <span className="border-2 border-gray-700 absolute -top-5 left-2 bg-white rounded-lg text-black text-xs m-2 px-3 py-0.5">
           {category}
@@ -17,7 +20,7 @@ const Card = (data) => {
           alt={description}
         />
         <MdAdd
-          onClick={() => context.setCount(context.count + 1)}
+          onClick={() => setCount(count + 1)}
           className="absolute top-0 right-0 bg-white w-6 h-6 rounded-full m-2 p-1"
         />
       </figure>

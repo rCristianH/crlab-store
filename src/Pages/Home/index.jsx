@@ -1,9 +1,11 @@
 import { Card } from '../../Components/Card';
 import { Layout } from '../../Components/Layout';
+import { ProductDetail } from '../../Components/ProductDetail';
 import { useFetchProducts } from '../../Service/useService';
 
 const Home = () => {
   const items = useFetchProducts();
+  
   return (
     <Layout>
       Home
@@ -12,6 +14,7 @@ const Home = () => {
           <Card key={item.id} data={item} />
         ))}
       </div>
+      <ProductDetail/>
     </Layout>
   );
 };

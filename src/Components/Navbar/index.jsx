@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import { ShoppingCartContext } from '../../Context';
 
 const Navbar = () => {
-  const context = useContext(ShoppingCartContext);
+  const {count} = useContext(ShoppingCartContext);
   const activeStyle = 'underline underline-offset-4 decoration-green-700';
 
   return (
@@ -65,8 +65,12 @@ const Navbar = () => {
             Sign In
           </NavbarItem>
         </li>
-        <li>
-          <MdOutlineShoppingCart /> {context.count}
+        <li className="relative">
+          <MdOutlineShoppingCart />{' '}
+          <span class="absolute bottom-2 -right-1 bg-gray-300 rounded-full p-0.5 aspect-square h-3 text-[10px] leading-none text-center">
+            {' '}
+            {count}
+          </span>
         </li>
       </ul>
     </nav>
