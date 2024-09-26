@@ -3,3 +3,12 @@
   height: calc(100vh - 84px);
   top: 84px;
 }
+.product-detail::-webkit-scrollbar{
+  height: 2px;
+  width: 8px;
+  border-radius: 3px;
+}
+.product-detail::-webkit-scrollbar-thumb{
+  background-color: black;
+  border-radius: 3px;
+}

@@ -67,7 +67,7 @@ const Navbar = () => {
         </li>
         <li className="relative">
           <MdOutlineShoppingCart />{' '}
-          <span class="absolute bottom-2 -right-1 bg-gray-300 rounded-full p-0.5 aspect-square h-3 text-[10px] leading-none text-center">
+          <span className="absolute bottom-2 -right-1 bg-gray-300 rounded-full p-0.5 aspect-square h-3 text-[10px] leading-none text-center">
             {' '}
             {count}
           </span>
