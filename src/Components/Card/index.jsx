@@ -69,7 +69,7 @@ const Card = (data) => {
             addProductsToCart(data.data)
 
           }}
-          className="absolute top-0 right-0 bg-white w-6 h-6 rounded-full m-2 p-1"
+          className="absolute top-0 right-0 w-6 h-6 rounded-full m-2 p-1 bg-black text-white"
         />
       </figure>
       <p className="flex justify-between m-2">

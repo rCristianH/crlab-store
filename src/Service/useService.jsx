@@ -8,7 +8,20 @@ const useFetchProducts = () => {
       .then((res) => res.json())
       .then((json) => setItems(json));
   }, []);
-  return items;
+
+  const dic = {
+    "men's clothing": "blue",
+    "jewelery": "red",
+    "electronics": "green",
+    "women's clothing": "pink",
+  }
+
+  return items?.map(i => {
+    return {
+      ...i, 
+      color: dic[i.category] || "yellow"
+    }
+  })
 };
 
 export { useFetchProducts };

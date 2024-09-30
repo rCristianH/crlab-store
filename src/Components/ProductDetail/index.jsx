@@ -13,7 +13,7 @@ const ProductDetail = () => {
     >
       <div className="flex justify-between items-center p-8">
         <h2 className="font-medium text-xl">Detail</h2>
-        <MdClose className='cursor-pointer' onClick={() => closeProductDetail()} />
+        <MdClose className='cursor-pointer bg-black text-white h-6 w-6 rounded-full' onClick={() => closeProductDetail()} />
       </div>
       <figure className="">
         <img
