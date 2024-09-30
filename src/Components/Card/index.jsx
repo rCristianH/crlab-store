@@ -6,11 +6,13 @@ const Card = (data) => {
   //destructuring context
   const {
     openProductDetail,
+    closeProductDetail,
     setCount,
     count,
     setProductToShow,
     cartProducts,
-    setCartProducts
+    setCartProducts,
+    openProductCart,
   } = useContext(ShoppingCartContext);
   //products from api
   const {
@@ -29,8 +31,21 @@ const Card = (data) => {
   };
   const addProductsToCart = (productData) => {
     setCount(count + 1)
-    setCartProducts([...cartProducts, productData])
-    console.log("cart products array", cartProducts);
+    productData.amount = 1
+    closeProductDetail()
+    openProductCart()
+    setCartProducts(() => {
+      const productInCart = cartProducts.find(p => p.id === productData.id)
+
+      if (productInCart) {
+        return cartProducts.map(p => p.id === productData.id
+          ? { ...p, amount: p.amount + 1 } : p
+        )
+      } else {
+
+        return [...cartProducts, productData]
+      }
+    })
   }
 
   return (

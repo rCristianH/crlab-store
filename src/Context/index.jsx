@@ -16,6 +16,15 @@ const ShoppingCartProvider = ({ children }) => {
     setIsProductDetailOpen(false);
   };
 
+  //toggle 
+  const [isProductCartOpen, setIsProductCartOpen] = useState(false);
+  const openProductCart = () => {
+    setIsProductCartOpen(true)
+  }
+  const closeProductCart = () => {
+    setIsProductCartOpen(false)
+  }
+
   //show product
   const [productToShow, setProductToShow] = useState({})
 
@@ -34,6 +43,10 @@ const ShoppingCartProvider = ({ children }) => {
         setProductToShow,
         cartProducts,
         setCartProducts,
+        openProductCart,
+        isProductCartOpen,
+        closeProductCart,
+        setIsProductCartOpen
       }}
     >
       {children}

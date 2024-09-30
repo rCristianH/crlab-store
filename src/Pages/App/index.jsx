@@ -3,6 +3,7 @@ import { serviceWorker } from '../../Utils/SW';
 import { AppRoutes } from '../../Routes/AppRoutes';
 import { Navbar } from '../../Components/Navbar';
 import { ShoppingCartProvider } from '../../Context';
+import { ChekoutSideMenu } from '../../Components/CheckoutSideMenu';
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <BrowserRouter>
         <Navbar />
         <AppRoutes />
+        <ChekoutSideMenu />
       </BrowserRouter>
     </ShoppingCartProvider>
   );
