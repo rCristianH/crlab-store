@@ -13,6 +13,7 @@ const Card = (data) => {
     cartProducts,
     setCartProducts,
     openProductCart,
+    closeProductCart,
   } = useContext(ShoppingCartContext);
   //products from api
   const {
@@ -27,6 +28,7 @@ const Card = (data) => {
 
   const showProduct = (productDetail) => {
     setProductToShow(productDetail);
+    closeProductCart()
     openProductDetail();
   };
   const addProductsToCart = (productData) => {

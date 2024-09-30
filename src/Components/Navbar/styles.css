@@ -1,0 +1,4 @@
+.grow-animation {
+  transform: scale(2); /* Escala el tamaño del span */
+  opacity: 1.5; /* Hace que se desvanezca un poco */
+}
