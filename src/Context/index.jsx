@@ -3,8 +3,10 @@ import { createContext, useState } from 'react';
 const ShoppingCartContext = createContext();
 
 const ShoppingCartProvider = ({ children }) => {
+
   //increment
   const [count, setCount] = useState(0);
+
   //open / close
   const [isProductDetailOpen, setIsProductDetailOpen] = useState(false);
   const openProductDetail = () => {
@@ -13,9 +15,12 @@ const ShoppingCartProvider = ({ children }) => {
   const closeProductDetail = () => {
     setIsProductDetailOpen(false);
   };
+
   //show product
   const [productToShow, setProductToShow] = useState({})
 
+  //cart products
+  const [cartProducts, setCartProducts] = useState([])
 
   return (
     <ShoppingCartContext.Provider
@@ -26,7 +31,9 @@ const ShoppingCartProvider = ({ children }) => {
         closeProductDetail,
         isProductDetailOpen,
         productToShow,
-        setProductToShow
+        setProductToShow,
+        cartProducts,
+        setCartProducts,
       }}
     >
       {children}
