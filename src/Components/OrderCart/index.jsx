@@ -2,26 +2,17 @@ import { useContext } from "react"
 import { MdClose } from "react-icons/md"
 import { ShoppingCartContext } from "../../Context"
 
-const OrderCart = ({ id, title, imgURL, price, amount }) => {
+const OrderCart = ({ id, title, imgURL, price, amount, removeProduct }) => {
 
   const { cartProducts, setCartProducts, count, setCount } = useContext(ShoppingCartContext)
-  const removeProduct = (id) => {
-    // Buscar el producto en el carrito por su id
-    const productToRemove = cartProducts.find(product => product.id === id);
-  
-    // Si el producto existe en el carrito
-    if (productToRemove) {
-      // Restar la cantidad del producto que se va a eliminar al contador total
-      setCount(count => count - productToRemove.amount);
-  
-      // Filtrar el carrito para eliminar el producto que tiene el mismo id
-      const updatedCartProducts = cartProducts.filter(product => product.id !== id);
-  
-      // Actualizar el estado del carrito con el nuevo array sin el producto eliminado
-      setCartProducts(updatedCartProducts);
-    }
-  };
-  
+
+  let renderCloseIcon 
+
+  if(removeProduct){
+    renderCloseIcon = <MdClose className='bg-black text-white h-5 w-5 cursor-pointer rounded-full mr-4' onClick={() => {
+      removeProduct(id)
+    }} />
+  }
 
   return (
     <div className="flex items-center justify-between w-11/12 h-24 my-2 mx-auto rounded-2xl">
@@ -35,9 +26,7 @@ const OrderCart = ({ id, title, imgURL, price, amount }) => {
       </div>
       <div className="flex justify-between flex-col-reverse items-end  h-16">
         <p className="font-bold mr-4">${price}</p>
-        <MdClose className='bg-black text-white h-5 w-5 cursor-pointer rounded-full mr-4' onClick={() => {
-          removeProduct(id)
-        }} />
+        {renderCloseIcon}
       </div>
     </div>
   )

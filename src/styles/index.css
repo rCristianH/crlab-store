@@ -11,3 +11,18 @@ body::-webkit-scrollbar-thumb{
   background-color: black;
   border-radius: 4px;
 }
+.product-detail {
+  width: 360px;
+  height: calc(100vh - 84px);
+  top: 84px;
+}
+
+.my-order::-webkit-scrollbar, .product-detail::-webkit-scrollbar{
+  height: 2px;
+  width: 8px;
+  border-radius: 3px;
+}
+.my-order::-webkit-scrollbar-thumb ,.product-detail::-webkit-scrollbar-thumb{
+  background-color: black;
+  border-radius: 3px;
+}
