@@ -7,7 +7,6 @@ import { MdArrowBackIos } from 'react-icons/md';
 
 const MyOrders = () => {
   const { order } = useContext(ShoppingCartContext)
-  console.log(order);
   return (
     <Layout>
       <div

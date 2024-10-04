@@ -1,4 +1,5 @@
 import { createContext, useState } from 'react';
+import { useLocalStorage } from '../Service/useLocalStorage';
 
 const ShoppingCartContext = createContext();
 
@@ -35,7 +36,7 @@ const ShoppingCartProvider = ({ children }) => {
   const [cartProducts, setCartProducts] = useState([])
 
   //my orders
-  const [order, setOrder] = useState(useL)
+  const [order, setOrder] = useLocalStorage("MyOrdersV1", [])
 
   return (
     <ShoppingCartContext.Provider
