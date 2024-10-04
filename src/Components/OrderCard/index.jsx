@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { MdClose } from "react-icons/md"
 import { ShoppingCartContext } from "../../Context"
 
-const OrderCart = ({ id, title, imgURL, price, amount, removeProduct }) => {
+const OrderCard = ({ id, title, imgURL, price, amount, removeProduct }) => {
 
   const { cartProducts, setCartProducts, count, setCount } = useContext(ShoppingCartContext)
 
@@ -31,4 +31,4 @@ const OrderCart = ({ id, title, imgURL, price, amount, removeProduct }) => {
     </div>
   )
 }
-export { OrderCart }
+export { OrderCard }

@@ -2,7 +2,7 @@ import { MdClose } from 'react-icons/md';
 import './styles.css';
 import { useContext } from 'react';
 import { ShoppingCartContext } from '../../Context';
-import { OrderCart } from '../OrderCart';
+import { OrderCard } from '../OrderCard';
 import { TotalPrice } from '../../Utils/TotalPrice';
 import { Link } from 'react-router-dom';
 
@@ -33,15 +33,15 @@ const ChekoutSideMenu = () => {
   const removeProduct = (id) => {
     // Buscar el producto en el carrito por su id
     const productToRemove = cartProducts.find(product => product.id === id);
-  
+
     // Si el producto existe en el carrito
     if (productToRemove) {
       // Restar la cantidad del producto que se va a eliminar al contador total
       setCount(count => count - productToRemove.amount);
-  
+
       // Filtrar el carrito para eliminar el producto que tiene el mismo id
       const updatedCartProducts = cartProducts.filter(product => product.id !== id);
-  
+
       // Actualizar el estado del carrito con el nuevo array sin el producto eliminado
       setCartProducts(updatedCartProducts);
     }
@@ -56,7 +56,7 @@ const ChekoutSideMenu = () => {
       </div>
       {
         cartProducts.map(p => (
-          <OrderCart key={p.id} id={p.id} title={p.title} price={p.price} imgURL={p.image} amount={p.amount} removeProduct={removeProduct}/>
+          <OrderCard key={p.id} id={p.id} title={p.title} price={p.price} imgURL={p.image} amount={p.amount} removeProduct={removeProduct} />
         ))
       }
       <div className='fixed flex justify-evenly mx-4 mt-6 w-72 bottom-14 p-2 rounded-lg'>
@@ -64,9 +64,9 @@ const ChekoutSideMenu = () => {
         <span className='font-bold text-lg' >$ {TotalPrice(cartProducts)}</span>
       </div>
       <Link to="/my-orders/last">
-      <button className='fixed mx-4 mt-6 bg-black w-72 bottom-4 text-white p-2 rounded-lg' onClick={() => hadleCheckout()}>Chekout</button>
+        <button className='fixed mx-4 mt-6 bg-black w-72 bottom-4 text-white p-2 rounded-lg' onClick={() => hadleCheckout()}>Chekout</button>
       </Link>
-      
+
 
 
     </aside>
