@@ -24,6 +24,9 @@ const ShoppingCartProvider = ({ children }) => {
   const closeProductCart = () => {
     setIsProductCartOpen(false)
   }
+  const toggleProductCart = ()=> {
+    setIsProductCartOpen(!isProductCartOpen)
+  }
 
   //show product
   const [productToShow, setProductToShow] = useState({})
@@ -32,7 +35,7 @@ const ShoppingCartProvider = ({ children }) => {
   const [cartProducts, setCartProducts] = useState([])
 
   //my orders
-  const [order, setOrder] = useState([])
+  const [order, setOrder] = useState(useL)
 
   return (
     <ShoppingCartContext.Provider
@@ -46,9 +49,10 @@ const ShoppingCartProvider = ({ children }) => {
         setProductToShow,
         cartProducts,
         setCartProducts,
-        openProductCart,
         isProductCartOpen,
+        openProductCart,
         closeProductCart,
+        toggleProductCart,
         setIsProductCartOpen,
         order,
         setOrder,

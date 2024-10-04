@@ -20,7 +20,7 @@ const ChekoutSideMenu = () => {
 
   const hadleCheckout = () => {
     const orderToAdd = {
-      date: new Date,
+      date: new Date().toLocaleDateString('es-ES'),
       products: cartProducts,
       totalProducts: count,
       totalPrice: TotalPrice(cartProducts)

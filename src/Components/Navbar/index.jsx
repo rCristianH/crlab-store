@@ -6,7 +6,7 @@ import { useContext, useEffect, useState } from 'react';
 import { ShoppingCartContext } from '../../Context';
 
 const Navbar = () => {
-  const { count } = useContext(ShoppingCartContext);
+  const { count, toggleProductCart } = useContext(ShoppingCartContext);
   const activeStyle = 'underline underline-offset-4 decoration-green-700';
 
   const [animate, setAnimate] = useState(false);
@@ -80,7 +80,7 @@ const Navbar = () => {
             Sign In
           </NavbarItem>
         </li>
-        <li className="relative">
+        <li className="relative" onClick={() => toggleProductCart()}>
           <MdOutlineShoppingCart />
           <span className={`absolute bottom-2 -right-1 bg-gray-300 rounded-full p-0.5 aspect-square h-3 text-[10px] font-bold leading-none text-center transition-all duration-500 ease-out ${animate ? 'grow-animation bg-orange-500' : ''}`}>
             {count}
