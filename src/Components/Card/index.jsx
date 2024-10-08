@@ -73,7 +73,7 @@ const Card = (data) => {
       </figure>
       <p className="flex justify-between m-2">
         <span className="text-sm font-light overflow-hidden h-10">{name_text_es}</span>
-        <span className="text-lg font-bold">${pricevalue_cop_double}</span>
+        <span className="text-lg font-bold">${Number(pricevalue_cop_double).toLocaleString('es-CO')}</span>
       </p>
     </div>
   );

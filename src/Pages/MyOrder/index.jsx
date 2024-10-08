@@ -37,7 +37,7 @@ const MyOrder = () => {
       </div>
       <div className='fixed flex justify-evenly mx-4 mt-6 w-full bottom-14 p-2 rounded-lg'>
         <p className='font-semibold text-lg'>Total:</p>
-        <span className='font-bold text-lg' >$ {selectedOrder.totalPrice}</span>
+        <span className='font-bold text-lg' >$ {Number(selectedOrder.totalPrice).toLocaleString('es-CO', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
       </div>
 
 

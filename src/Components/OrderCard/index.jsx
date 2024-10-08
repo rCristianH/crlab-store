@@ -24,7 +24,7 @@ const OrderCard = ({ code_string, name_text_es, pricevalue_cop_double, amount, i
         </div>
       </div>
       <div className="flex justify-between flex-col-reverse items-end h-16">
-        <p className="font-bold mr-4">${pricevalue_cop_double}</p>
+        <p className="font-bold mr-4">${Number(pricevalue_cop_double).toLocaleString('es-CO')}</p>
         {renderCloseIcon}
       </div>
     </div>

@@ -24,7 +24,8 @@ const ProductDetail = () => {
         />
       </figure>
       <p className="flex flex-col p-6">
-        <span className="font-medium text-2xl mb-2">${pricevalue_cop_double}</span>
+        <span className="font-medium text-2xl mb-2">$ {Number(pricevalue_cop_double).toLocaleString('es-CO', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+        </span>
         <span className="font-medium text-md">{name_text_es}</span>
         <span className="font-light text-sm">{keyfeatures_string_mv}</span>
       </p>

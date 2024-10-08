@@ -17,9 +17,11 @@
  * console.log(total); // 275.89
  */
 const TotalPrice = (cartProducts) => {
-  return cartProducts.reduce((total, product) => {
-    return total + (product.pricevalue_cop_double * product.amount);
-  }, 0).toFixed(2);
+  return Math.round(
+    cartProducts.reduce((total, product) => {
+      return total + (product.pricevalue_cop_double * product.amount);
+    }, 0) * 100
+  ) / 100;
 }
 
 export { TotalPrice };

@@ -60,7 +60,8 @@ const ChekoutSideMenu = () => {
       }
       <div className='fixed flex justify-evenly mx-4 mt-6 w-72 bottom-14 p-2 rounded-lg'>
         <p className='font-semibold text-lg'>Total:</p>
-        <span className='font-bold text-lg' >$ {TotalPrice(cartProducts)}</span>
+        <span className='font-bold text-lg' >$ {TotalPrice(cartProducts).toLocaleString('es-CO')}
+        </span>
       </div>
       <Link to="/my-orders/last">
         <button className='fixed mx-4 mt-6 bg-black w-72 bottom-4 text-white p-2 rounded-lg' onClick={() => hadleCheckout()}>Chekout</button>

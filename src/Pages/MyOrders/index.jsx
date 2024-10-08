@@ -10,10 +10,10 @@ const MyOrders = () => {
   return (
     <Layout>
       <div
-        className={`flex items-center overflow-x-hidden mx-auto max-w-4xl w-100 flex-col rounded-lg my-order`}
+        className={`flex items-center overflow-x-hidden mx-auto max-w-4xl w-96 flex-col rounded-lg my-order`}
       >
         <h2 className="font-medium text-xl">My Orders</h2>
-        <div className="flex flex-wrap gap-3 justify-between items-center p-8 w-[500px]">
+        <div className="flex flex-wrap gap-3 justify-between items-center p-8 w-[500px] max-sm:w-56">
 
           {
             order.map((order, index) => (
