@@ -27,7 +27,6 @@ const useFetchProducts = () => {
 
   useEffect(() => {
     const spreadArray = [...AudioList, ...CamList, ...pcsList, ...SmartPhonesList, ...VideoGames]
-    console.log(spreadArray)
     setItems(spreadArray)
 
     /* const fetchData = async () => {

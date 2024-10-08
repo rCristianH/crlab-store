@@ -17,7 +17,6 @@ const ChekoutSideMenu = () => {
     setOrder,
     order
   } = useContext(ShoppingCartContext)
-  console.log(cartProducts);
   const hadleCheckout = () => {
     const orderToAdd = {
       date: new Date().toLocaleDateString('es-ES'),
