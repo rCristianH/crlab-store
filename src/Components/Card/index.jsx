@@ -17,14 +17,13 @@ const Card = (data) => {
   } = useContext(ShoppingCartContext);
   //products from api
   const {
-    id,
-    title,
-    price,
+    code_string,
+    name_text_es,
+    pricevalue_cop_double,
+    marca_text,
     description,
-    category,
-    image,
-    rating,
   } = data.data;
+  const img750 = data.data["img-750wx750h_string"]
 
   const showProduct = (productDetail) => {
     setProductToShow(productDetail);
@@ -37,10 +36,10 @@ const Card = (data) => {
     closeProductDetail()
     openProductCart()
     setCartProducts(() => {
-      const productInCart = cartProducts.find(p => p.id === productData.id)
+      const productInCart = cartProducts.find(p => p.code_string === productData.code_string)
 
       if (productInCart) {
-        return cartProducts.map(p => p.id === productData.id
+        return cartProducts.map(p => p.code_string === productData.code_string
           ? { ...p, amount: p.amount + 1 } : p
         )
       } else {
@@ -56,11 +55,11 @@ const Card = (data) => {
     >
       <figure className="relative flex items-center justify-center mb-2 w-full h-4/5 p-2" >
         <span className="border-2 border-gray-700 absolute -top-5 left-2 bg-white rounded-lg text-black text-xs m-2 px-3 py-0.5">
-          {category}
+          {marca_text}
         </span>
         <img
           className=" max-h-full max-w-f p-2 object-cover rounded-lg"
-          src={image}
+          src={`https://www.alkosto.com${img750}`}
           alt={description}
           onClick={() => showProduct(data.data)}
         />
@@ -73,8 +72,8 @@ const Card = (data) => {
         />
       </figure>
       <p className="flex justify-between m-2">
-        <span className="text-sm font-light overflow-hidden h-10">{title}</span>
-        <span className="text-lg font-bold">${price}</span>
+        <span className="text-sm font-light overflow-hidden h-10">{name_text_es}</span>
+        <span className="text-lg font-bold">${pricevalue_cop_double}</span>
       </p>
     </div>
   );

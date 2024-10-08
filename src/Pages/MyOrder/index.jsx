@@ -31,7 +31,7 @@ const MyOrder = () => {
 
       <div>
         {selectedOrder?.products.map(p => (
-          <OrderCard key={p.id} id={p.id} title={p.title} price={p.price} imgURL={p.image} amount={p.amount} />
+          <OrderCard key={p.code_string} code_string={p.code_strig} name_text_es={p.name_text_es} pricevalue_cop_double={p.pricevalue_cop_double} imgUrl={p['img-750wx750h_string']} amount={p.amount} />
         ))
         }
       </div>

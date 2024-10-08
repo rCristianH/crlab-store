@@ -18,7 +18,7 @@
  */
 const TotalPrice = (cartProducts) => {
   return cartProducts.reduce((total, product) => {
-    return total + (product.price * product.amount);
+    return total + (product.pricevalue_cop_double * product.amount);
   }, 0).toFixed(2);
 }
 

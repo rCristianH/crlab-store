@@ -5,7 +5,8 @@ import { ShoppingCartContext } from '../../Context';
 const ProductDetail = () => {
   const { isProductDetailOpen, closeProductDetail, productToShow } =
     useContext(ShoppingCartContext);
-  const { id, title, price, description, category, image } = productToShow;
+  const { code_string, name_text_es, pricevalue_cop_double, keyfeatures_string_mv } = productToShow;
+  const img750 = productToShow["img-750wx750h_string"]
 
   return (
     <aside
@@ -18,14 +19,14 @@ const ProductDetail = () => {
       <figure className="">
         <img
           className="bg-red px-10 w-full rounded-lg"
-          src={image}
-          alt={title}
+          src={`https://www.alkosto.com${img750}`}
+          alt={name_text_es}
         />
       </figure>
       <p className="flex flex-col p-6">
-        <span className="font-medium text-2xl mb-2">${price}</span>
-        <span className="font-medium text-md">{title}</span>
-        <span className="font-light text-sm">{description}</span>
+        <span className="font-medium text-2xl mb-2">${pricevalue_cop_double}</span>
+        <span className="font-medium text-md">{name_text_es}</span>
+        <span className="font-light text-sm">{keyfeatures_string_mv}</span>
       </p>
     </aside>
   );
