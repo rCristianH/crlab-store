@@ -1,9 +1,12 @@
 import { createContext, useState } from 'react';
 import { useLocalStorage } from '../Service/useLocalStorage';
+import { useFetchProducts } from '../Service/useService';
 
 const ShoppingCartContext = createContext();
 
 const ShoppingCartProvider = ({ children }) => {
+
+  const items = useFetchProducts()
 
   //increment
   const [count, setCount] = useState(0);
@@ -25,7 +28,7 @@ const ShoppingCartProvider = ({ children }) => {
   const closeProductCart = () => {
     setIsProductCartOpen(false)
   }
-  const toggleProductCart = ()=> {
+  const toggleProductCart = () => {
     setIsProductCartOpen(!isProductCartOpen)
   }
 
@@ -41,19 +44,20 @@ const ShoppingCartProvider = ({ children }) => {
   return (
     <ShoppingCartContext.Provider
       value={{
+        items,
         count,
         setCount,
         openProductDetail,
         closeProductDetail,
         isProductDetailOpen,
+        openProductCart,
+        closeProductCart,
+        toggleProductCart,
         productToShow,
         setProductToShow,
         cartProducts,
         setCartProducts,
         isProductCartOpen,
-        openProductCart,
-        closeProductCart,
-        toggleProductCart,
         setIsProductCartOpen,
         order,
         setOrder,

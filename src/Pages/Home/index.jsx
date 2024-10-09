@@ -1,11 +1,12 @@
+import { useContext } from 'react';
 import { Card } from '../../Components/Card';
 import { Layout } from '../../Components/Layout';
 import { ProductDetail } from '../../Components/ProductDetail';
-import { useFetchProducts } from '../../Service/useService';
+import { ShoppingCartContext } from '../../Context';
 
 const Home = () => {
-  const items = useFetchProducts();
- 
+  const { items } = useContext(ShoppingCartContext)
+
   return (
     <Layout>
 
