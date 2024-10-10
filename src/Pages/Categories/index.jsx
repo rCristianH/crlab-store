@@ -9,6 +9,7 @@ const CategoryFilter = () => {
 
   const [searchMode, setSearchMode] = useState(false);
   const { items, setArgSearch, filteredItems } = useContext(ShoppingCartContext)
+  const [filteredCategoryItems, setFilteredCategoryItems] = useState([]);
 
   const category = getLastPathSetment()
   const categoryItems = items?.filter((item => item.category_string_mv[0] === category))
@@ -17,10 +18,17 @@ const CategoryFilter = () => {
     const arg = e.target.value;
     setArgSearch(arg);
     setSearchMode(arg !== "");
+
+    const filtered = categoryItems?.filter(item =>
+      item.name_text_es.toLowerCase().includes(arg.toLowerCase())
+    );
+    setFilteredCategoryItems(filtered);
+
   }
   const clearSearch = () => {
     setArgSearch("");
     setSearchMode(false);
+    setFilteredCategoryItems([]);
   };
   const renderItems = (itemsList) => {
     if (!itemsList || itemsList.length === 0) {
@@ -35,13 +43,15 @@ const CategoryFilter = () => {
     <Layout>
       <div className='flex items-center justify-center relative w-80 mb-4'>
         <input
+          id="search-input"
+          name="search"
           className='placeholder-gray-600 bg-gray-200 h-12 w-96 p-4 rounded-full' type='text'
           placeholder='What are you looking for today?'
           onChange={handleSearchChange}
         />
       </div>
       <div className=" mt-5 grid gap-4 grid-cols-4 justify-items-center w-full max-w-screen-lg max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1">
-        {searchMode ? renderItems(filteredItems) : renderItems(categoryItems)}
+        {searchMode ? renderItems(filteredCategoryItems) : renderItems(categoryItems)}
       </div>
       <ProductDetail />
     </Layout>

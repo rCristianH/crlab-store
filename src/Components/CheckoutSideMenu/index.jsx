@@ -1,6 +1,6 @@
 import { MdClose } from 'react-icons/md';
 import './styles.css';
-import { useContext } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { ShoppingCartContext } from '../../Context';
 import { OrderCard } from '../OrderCard';
 import { TotalPrice } from '../../Utils/TotalPrice';
@@ -17,6 +17,27 @@ const ChekoutSideMenu = () => {
     setOrder,
     order
   } = useContext(ShoppingCartContext)
+  // Usar un ref para el aside
+  const asideRef = useRef(null);
+
+  useEffect(() => {
+    // Manejar clics fuera del aside
+    const handleClickOutside = (event) => {
+      // Si se hace clic fuera del aside y el carrito está abierto, cerrarlo
+      if (asideRef.current && !asideRef.current.contains(event.target)) {
+        closeProductCart();
+      }
+    };
+
+    // Agregar evento al document
+    document.addEventListener('mousedown', handleClickOutside);
+
+    // Limpiar el evento al desmontar el componente
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [closeProductCart]);
+
   const hadleCheckout = () => {
     const orderToAdd = {
       date: new Date().toLocaleDateString('es-ES'),
@@ -47,6 +68,7 @@ const ChekoutSideMenu = () => {
   };
   return (
     <aside
+    ref={asideRef}
       className={`${isProductCartOpen ? 'flex' : 'hidden'} overflow-y-scroll overflow-x-hidden mr-1 product-cart flex-col fixed right-0 h-99 border-2 border-black rounded-lg bg-white pb-24`}
     >
       <div className="flex justify-between items-center p-8">

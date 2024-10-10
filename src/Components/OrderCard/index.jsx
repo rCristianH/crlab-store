@@ -16,7 +16,7 @@ const OrderCard = ({ code_string, name_text_es, pricevalue_cop_double, amount, i
   return (
     <div className="flex items-center justify-between w-11/12 my-2 mx-auto rounded-2xl">
       <div className=" flex">
-        <figure className="h-16 aspect-square ml-4 rounded-lg">
+        <figure className="h-24 aspect-square ml-4 rounded-lg">
           <img className="max-h-full max-w-f p-2 object-cover m-auto" src={`https://www.alkosto.com${imgUrl}`} alt={name_text_es} />
         </figure>
         <div><p className="ml-4 text-sm font-light overflow-y-scroll overflow-x-hidden  my-order">{name_text_es}</p>
