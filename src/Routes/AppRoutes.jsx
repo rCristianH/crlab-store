@@ -5,10 +5,17 @@ import { MyOrder } from '../Pages/MyOrder';
 import { MyOrders } from '../Pages/MyOrders';
 import { SignIn } from '../Pages/SingIn';
 import { NotFound } from '../Pages/NotFound';
+import { CategoryFilter } from '../Pages/Categories';
 
 const AppRoutes = () => {
   const routes = useRoutes([
     { path: '/', element: <Home /> },
+    { path: '/all', element: <Home /> },
+    { path: '/BI_AUDI_ALKOS', element: <CategoryFilter /> },
+    { path: '/BI_CAMA_ALKOS', element: <CategoryFilter /> },
+    { path: '/BI_CELU_ALKOS', element: <CategoryFilter /> },
+    { path: '/BI_COMP_ALKOS', element: <CategoryFilter /> },
+    { path: '/BI_VIJU_ALKOS', element: <CategoryFilter /> },
     { path: '/my-account', element: <MyAccount /> },
     { path: '/my-order', element: <MyOrder /> },
     { path: '/my-orders', element: <MyOrders /> },

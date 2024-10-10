@@ -35,28 +35,28 @@ const Navbar = () => {
           </NavbarItem>
         </li>
         <li>
-          <NavbarItem activeStyle={activeStyle} to="/clothes">
-            Clothes
+          <NavbarItem activeStyle={activeStyle} to="/BI_AUDI_ALKOS">
+            Audio
           </NavbarItem>
         </li>
         <li>
-          <NavbarItem activeStyle={activeStyle} to="/electronics">
-            Electronics
+          <NavbarItem activeStyle={activeStyle} to="/BI_CAMA_ALKOS">
+            Cameras
           </NavbarItem>
         </li>
         <li>
-          <NavbarItem activeStyle={activeStyle} to="/fornitures">
-            Fornitures
+          <NavbarItem activeStyle={activeStyle} to="/BI_CELU_ALKOS">
+            Smartphones
           </NavbarItem>
         </li>
         <li>
-          <NavbarItem activeStyle={activeStyle} to="/toys">
-            Toys
+          <NavbarItem activeStyle={activeStyle} to="/BI_COMP_ALKOS">
+            Computers
           </NavbarItem>
         </li>
         <li>
-          <NavbarItem activeStyle={activeStyle} to="/others">
-            Others
+          <NavbarItem activeStyle={activeStyle} to="/BI_VIJU_ALKOS">
+            VideoGames
           </NavbarItem>
         </li>
       </ul>
