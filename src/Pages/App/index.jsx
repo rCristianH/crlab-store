@@ -8,7 +8,7 @@ import { ChekoutSideMenu } from '../../Components/CheckoutSideMenu';
 const App = () => {
   return (
     <ShoppingCartProvider>
-      <BrowserRouter>
+      <BrowserRouter basename='/front-store'>
         <Navbar />
         <AppRoutes />
         <ChekoutSideMenu />
