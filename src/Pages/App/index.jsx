@@ -9,6 +9,7 @@ const App = () => {
   return (
     <ShoppingCartProvider>
       <BrowserRouter basename='/front-store'>
+        serviceWorker();
         <Navbar />
         <AppRoutes />
         <ChekoutSideMenu />
@@ -17,6 +18,5 @@ const App = () => {
   );
 };
 
-serviceWorker();
 
 export { App };
