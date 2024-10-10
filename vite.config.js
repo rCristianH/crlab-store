@@ -31,25 +31,25 @@ export default defineConfig(({ command, mode }) => {
           categories: ['business', 'productivity'],
           icons: [
             {
-              src: 'https://www.example.com',
+              src: 'https://i.imgur.com/1zoeuEA.png',
               sizes: '192x192',
               type: 'image/png',
               purpose: 'any',
             },
             {
-              src: 'https://www.example.com',
+              src: 'https://i.imgur.com/1zoeuEA.png',
               sizes: '192x192',
               type: 'image/png',
               purpose: 'maskable',
             },
             {
-              src: 'https://www.example.com',
+              src: 'https://i.imgur.com/eRO6YOD.png',
               sizes: '512x512',
               type: 'image/png',
               purpose: 'any',
             },
             {
-              src: 'https://www.example.com',
+              src: 'https://i.imgur.com/eRO6YOD.png',
               sizes: '512x512',
               type: 'image/png',
               purpose: 'maskable',
