@@ -4,8 +4,12 @@ import { NavbarItem } from '../NavbarItem/NavbarItem';
 import { NavLink } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
 import { ShoppingCartContext } from '../../Context';
+import { serviceWorker } from "../../Utils/SW";
 
 const Navbar = () => {
+  //call service worker
+  //here by basename
+  serviceWorker()
   const { count, toggleProductCart } = useContext(ShoppingCartContext);
   const activeStyle = 'underline underline-offset-4 decoration-green-700';
 
