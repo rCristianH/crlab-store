@@ -1,12 +1,14 @@
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import { useLocalStorage } from '../Service/useLocalStorage';
 import { useFetchProducts } from '../Service/useService';
+import { getFilteredItems } from '../Utils/Filtered';
 
 const ShoppingCartContext = createContext();
 
 const ShoppingCartProvider = ({ children }) => {
 
   const items = useFetchProducts()
+  const [filteredItems, setFilteredItems] = useState(null)
 
   //increment
   const [count, setCount] = useState(0);
@@ -41,6 +43,15 @@ const ShoppingCartProvider = ({ children }) => {
   //my orders
   const [order, setOrder] = useLocalStorage("MyOrdersV1", [])
 
+  //search
+  const [argSearch, setArgSearch] = useState(null)
+
+  useEffect(() => {
+    if (argSearch) {
+      setFilteredItems(getFilteredItems(items, argSearch))
+    }
+  }, [items, argSearch])
+
   return (
     <ShoppingCartContext.Provider
       value={{
@@ -61,6 +72,10 @@ const ShoppingCartProvider = ({ children }) => {
         setIsProductCartOpen,
         order,
         setOrder,
+        argSearch,
+        setArgSearch,
+        filteredItems,
+        setFilteredItems,
       }}
     >
       {children}
