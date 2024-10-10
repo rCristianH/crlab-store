@@ -18,7 +18,7 @@ export default defineConfig(({ command, mode }) => {
           display_override: ['window-controls-overlay'],
           name: 'Banana Store',
           short_name: 'Banstore',
-          start_url: './index.html',
+          start_url: './',
           display: 'standalone',
           description: 'Esta es una Progressive Web App (PWA).',
           lang: 'ES',
