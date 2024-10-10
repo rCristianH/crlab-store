@@ -31,7 +31,7 @@ const ChekoutSideMenu = () => {
   }
   const removeProduct = (id) => {
     // Buscar el producto en el carrito por su id
-    const productToRemove = cartProducts.find(product => product.id === id);
+    const productToRemove = cartProducts.find(product => product.code_string === id);
 
     // Si el producto existe en el carrito
     if (productToRemove) {
@@ -39,7 +39,7 @@ const ChekoutSideMenu = () => {
       setCount(count => count - productToRemove.amount);
 
       // Filtrar el carrito para eliminar el producto que tiene el mismo id
-      const updatedCartProducts = cartProducts.filter(product => product.id !== id);
+      const updatedCartProducts = cartProducts.filter(product => product.code_string !== id);
 
       // Actualizar el estado del carrito con el nuevo array sin el producto eliminado
       setCartProducts(updatedCartProducts);
