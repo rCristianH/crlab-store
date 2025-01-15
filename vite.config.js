@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd());
   return {
-    base: '/front-store/',
+    base: '/crlab-store/',
     plugins: [
       react(),
       VitePWA({
@@ -16,11 +16,11 @@ export default defineConfig(({ command, mode }) => {
         manifest: {
           protocol_handlers: [{ protocol: 'mailto', url: '/newEmail?to=%s' }],
           display_override: ['window-controls-overlay'],
-          name: 'Banana Store',
-          short_name: 'Banstore',
+          name: 'Crlab Store',
+          short_name: 'CrLab',
           start_url: './',
           display: 'standalone',
-          description: 'Esta es una Progressive Web App (PWA).',
+          description: "Tienda en línea especializada en la venta de computadoras personales y soluciones tecnológicas para empresas, ofreciendo productos de alta calidad y servicio personalizado.",
           lang: 'ES',
           dir: 'auto',
           theme_color: '#c7c7c7',
@@ -28,7 +28,7 @@ export default defineConfig(({ command, mode }) => {
           orientation: 'any',
           id: 'bs2024',
           iarc_rating_id: 'e58c174a-81d2-5c3c-32cc-34b8de4a52e9',
-          categories: ['business', 'productivity'],
+          categories: ['business', 'store', 'personal computer'],
           icons: [
             {
               src: 'https://i.imgur.com/1zoeuEA.png',

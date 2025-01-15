@@ -7,7 +7,7 @@ import { ChekoutSideMenu } from '../../Components/CheckoutSideMenu';
 const App = () => {
   return (
     <ShoppingCartProvider>
-      <BrowserRouter basename='/front-store'>
+      <BrowserRouter basename='/crlab-store'>
         <Navbar />
         <AppRoutes />
         <ChekoutSideMenu />
