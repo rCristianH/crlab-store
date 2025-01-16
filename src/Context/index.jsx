@@ -77,7 +77,7 @@ const ShoppingCartProvider = ({ children }) => {
   const [cartProducts, setCartProducts] = useState([]);
 
   // Estado para manejar las órdenes del usuario utilizando almacenamiento local
-  const [order, setOrder] = useLocalStorage("MyOrdersV1", []);
+  const [order, setOrder] = useLocalStorage("MyOrdersV2", []);
 
   // Estado para manejar el término de búsqueda ingresado por el usuario
   const [argSearch, setArgSearch] = useState(null);
