@@ -20,7 +20,7 @@ const CategoryFilter = () => {
     setSearchMode(arg !== "");
 
     const filtered = categoryItems?.filter(item =>
-      item.name_text_es.toLowerCase().includes(arg.toLowerCase())
+      item.title.toLowerCase().includes(arg.toLowerCase())
     );
     setFilteredCategoryItems(filtered);
 

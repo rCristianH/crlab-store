@@ -1,6 +1,5 @@
 const IdeapadList = [
   {
-    "family": "Lenovo Ideapad",
     "SLIM3": [
       {
         "id" : "IS314AR3",
