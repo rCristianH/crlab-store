@@ -11,6 +11,10 @@ const CategoryFilter = () => {
   const { items, setArgSearch, filteredItems } = useContext(ShoppingCartContext)
   const [filteredCategoryItems, setFilteredCategoryItems] = useState([]);
 
+  if(!items || items.length === 0){
+    return <p>Cargando productos</p>
+  }
+
   const category = getLastPathSetment()
   const categoryItems = items[0][category];
 

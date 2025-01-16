@@ -19,13 +19,12 @@ import { ShoppingCartContext } from '../../Context';  // Contexto del carrito de
 const Home = () => {
   // Accede a `items` (todos los productos), `setArgSearch` (para filtrar), y `filteredItems` (productos filtrados) desde el contexto
   const { items, setArgSearch, filteredItems } = useContext(ShoppingCartContext);
-  console.log("🧪 ~ Home ~ items:", items)
   
   // Estado local para controlar si la búsqueda está activa o no
   const [searchMode, setSearchMode] = useState(false);
   
   if(!items || items.length === 0){
-    return <p>Cargondo productos</p>
+    return <p>Cargando productos</p>
   }
 
   const allItems = [...items[0]["SLIM3"],...items[0]["SLIM5"]]
