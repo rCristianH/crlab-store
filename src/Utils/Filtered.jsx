@@ -6,7 +6,7 @@ const removeAccents = (text) => {
     .toLowerCase();
 };
 const getFilteredItems = (items, argSearch) => {
-  const combi = Object.values(items[0]).flat()
+  const combi = Object.values(items)
   
   return combi.filter((i) => removeAccents(i.title).includes(removeAccents(argSearch)))
 }
