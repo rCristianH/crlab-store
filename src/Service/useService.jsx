@@ -1,11 +1,5 @@
 import { useEffect, useState } from 'react';
-import { API_URL } from '../api';
 import { useLocalStorage } from './useLocalStorage';  // Importa el hook de localStorage
-import { AudioList } from './API/Audio';
-import { CamList } from './API/Camaras';
-import { pcsList } from './API/PC';
-import { SmartPhonesList } from './API/Smartphones';
-import { VideoGames } from './API/VideoGames';
 import { IdeapadList } from './API/Ideapad';
 
 
@@ -31,7 +25,6 @@ const useFetchProducts = () => {
     const spreadArray = [
       ...IdeapadList
     ]
-    /* const spreadArray = [...AudioList, ...CamList, ...pcsList, ...SmartPhonesList, ...VideoGames] */
     setItems(spreadArray)
 
     /* const fetchData = async () => {
