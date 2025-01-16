@@ -17,13 +17,18 @@ const Card = (data) => {
   } = useContext(ShoppingCartContext);
   //products from api
   const {
-    code_string,
-    name_text_es,
-    pricevalue_cop_double,
-    marca_text,
-    description,
+    id,
+    available,
+    family,
+    title,
+    ref,
+    price,
+    cpu,
+    ram,
+    images,
+    logoBrandCPU,
+    logoCpu,
   } = data.data;
-  const img750 = data.data["img-750wx750h_string"]
 
   const showProduct = (productDetail) => {
     setProductToShow(productDetail);
@@ -51,16 +56,16 @@ const Card = (data) => {
 
   return (
     <div
-      className="bg-white cursor-pointer w-56 aspect-[3/4] rounded-lg border-2 border-gray-900 mb-4"
+      className="bg-white relative cursor-pointer w-56 aspect-[3/4] rounded-lg border-2 border-gray-900 mb-4"
     >
       <figure className="relative flex items-center justify-center mb-2 w-full h-4/5 p-2" >
         <span className="border-2 border-gray-700 absolute -top-5 left-2 bg-white rounded-lg text-black text-xs m-2 px-3 py-0.5">
-          {marca_text}
+          {family}
         </span>
         <img
           className=" max-h-full max-w-f p-2 object-cover rounded-lg"
-          src={`https://www.alkosto.com${img750}`}
-          alt={description}
+          src={images[3]}
+          alt={cpu}
           onClick={() => showProduct(data.data)}
         />
         <MdAdd
@@ -72,9 +77,11 @@ const Card = (data) => {
         />
       </figure>
       <p className="flex justify-between m-2">
-        <span className="text-sm font-light overflow-hidden h-10">{name_text_es}</span>
-        <span className="text-lg font-bold">${Number(pricevalue_cop_double).toLocaleString('es-CO')}</span>
+        <span className="text-sm font-light overflow-hidden h-10">{title}</span>
+        <span className="text-lg font-bold">${Number(price).toLocaleString('es-CO')}</span>
       </p>
+      <img className='bg-black absolute w-[30%] rounded-sm left-4 top-4' src={logoBrandCPU} alt="" />
+      <img className='bg-black absolute w-[30%] right-4 bottom-16' src={logoCpu} alt="" />
     </div>
   );
 };

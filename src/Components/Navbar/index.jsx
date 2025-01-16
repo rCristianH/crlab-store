@@ -1,5 +1,5 @@
 import "./styles.css"
-import { MdOutlineShoppingCart, MdLogoDev } from 'react-icons/md';
+import { MdOutlineShoppingCart, MdCrueltyFree  } from 'react-icons/md';
 import { NavbarItem } from '../NavbarItem/NavbarItem';
 import { NavLink } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
@@ -31,24 +31,24 @@ const Navbar = () => {
     <nav className="flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light">
       <ul className="flex items-center gap-4">
         <li className="font-semibold text-lg">
-          <NavLink to="/">AM</NavLink>
+          <NavLink to="/">CR</NavLink>
         </li>
         <li>
-          <NavbarItem activeStyle={activeStyle} to="/all">
-            All
+          <NavbarItem activeStyle={activeStyle} to="/Ideapad">
+            Ideapad
           </NavbarItem>
         </li>
         <li>
-          <NavbarItem activeStyle={activeStyle} to="/BI_AUDI_ALKOS">
-            Audio
+          <NavbarItem activeStyle={activeStyle} to="/SLIM3">
+            Slim 3
           </NavbarItem>
         </li>
         <li>
-          <NavbarItem activeStyle={activeStyle} to="/BI_CAMA_ALKOS">
-            Cameras
+          <NavbarItem activeStyle={activeStyle} to="/SLIM5">
+            Slim 5
           </NavbarItem>
         </li>
-        <li>
+        {/* <li>
           <NavbarItem activeStyle={activeStyle} to="/BI_CELU_ALKOS">
             Smartphones
           </NavbarItem>
@@ -62,12 +62,12 @@ const Navbar = () => {
           <NavbarItem activeStyle={activeStyle} to="/BI_VIJU_ALKOS">
             VideoGames
           </NavbarItem>
-        </li>
+        </li> */}
       </ul>
 
       <ul className="flex items-center gap-4">
         <li className="text-lg">
-          <MdLogoDev />
+          <MdCrueltyFree />
         </li>
         <li>
           <NavbarItem activeStyle={activeStyle} to="/my-orders">

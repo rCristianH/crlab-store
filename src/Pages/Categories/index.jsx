@@ -12,7 +12,7 @@ const CategoryFilter = () => {
   const [filteredCategoryItems, setFilteredCategoryItems] = useState([]);
 
   const category = getLastPathSetment()
-  const categoryItems = items?.filter((item => item.category_string_mv[0] === category))
+  const categoryItems = items[0][category];
 
   const handleSearchChange = (e) => {
     const arg = e.target.value;
@@ -35,7 +35,7 @@ const CategoryFilter = () => {
       return <p className='font-semibold' onClick={clearSearch}>Opps, Nothing found!!</p>;
     }
     return itemsList?.map((item) => (
-      <Card key={item.code_string} data={item} />
+      <Card key={item.id} data={item} />
     ));
   };
 

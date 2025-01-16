@@ -74,12 +74,12 @@ const Home = () => {
       </div>
       
       {/* Lista de productos */}
-      <div className="mt-5 grid gap-4 grid-cols-4 justify-items-center w-full max-w-screen-lg max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1">
-        {searchMode ? renderItems(filteredItems) : renderItems(items)}  {/* Muestra productos filtrados o todos */}
-      </div>
+      {/* <div className="mt-5 grid gap-4 grid-cols-4 justify-items-center w-full max-w-screen-lg max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1">
+        {searchMode ? renderItems(filteredItems) : renderItems(items)}  
+      </div> */}
       
       {/* Detalle del producto */}
-      <ProductDetail />
+      {/* <ProductDetail /> */}
     </Layout>
   );
 };

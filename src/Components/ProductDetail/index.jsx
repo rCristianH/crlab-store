@@ -1,12 +1,32 @@
 import { MdClose } from 'react-icons/md';
 import './styles.css';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { ShoppingCartContext } from '../../Context';
+
 const ProductDetail = () => {
   const { isProductDetailOpen, closeProductDetail, productToShow } =
     useContext(ShoppingCartContext);
-  const { code_string, name_text_es, pricevalue_cop_double, keyfeatures_string_mv } = productToShow;
-  const img750 = productToShow["img-750wx750h_string"]
+  const { id,
+    available,
+    family,
+    title,
+    ref,
+    price,
+    cpu,
+    ram,
+    images,
+    logoBrandCPU,
+    logoCpu, } = productToShow;
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handleNextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const handlePrevImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
 
   return (
     <aside
@@ -16,18 +36,37 @@ const ProductDetail = () => {
         <h2 className="font-medium text-xl">Detail</h2>
         <MdClose className='cursor-pointer bg-black text-white h-6 w-6 rounded-full' onClick={() => closeProductDetail()} />
       </div>
-      <figure className="">
-        <img
-          className="bg-red px-10 w-full rounded-lg"
-          src={`https://www.alkosto.com${img750}`}
-          alt={name_text_es}
-        />
-      </figure>
+      {images && images.length > 0 ? (
+        <figure className="">
+          <div className="relative">
+            <img
+              className="bg-red px-10 w-full rounded-lg"
+              src={images[currentImageIndex]}
+              alt={title}
+            />
+            <button
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-2xl"
+              onClick={handlePrevImage}
+            >
+              <img src={images[(currentImageIndex - 1 + images.length) % images.length]} alt="Prev" className="w-8 h-8 rounded-lg" />
+            </button>
+            <button
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-2xl"
+              onClick={handleNextImage}
+            >
+              <img src={images[(currentImageIndex + 1) % images.length]} alt="Next" className="w-8 h-8 rounded-lg" />
+            </button>
+          </div>
+        </figure>
+      ) : (
+        <p className="p-6">No images available</p>
+      )}
       <p className="flex flex-col p-6">
-        <span className="font-medium text-2xl mb-2">$ {Number(pricevalue_cop_double).toLocaleString('es-CO', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+        <span className="font-medium text-2xl mb-2">$ {Number(price).toLocaleString('es-CO', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
         </span>
-        <span className="font-medium text-md">{name_text_es}</span>
-        <span className="font-light text-sm">{keyfeatures_string_mv}</span>
+        <span className="font-medium text-md">{title}</span>
+        <span className="font-light text-sm">{cpu}</span>
+        <span className="font-light text-sm">RAM {ram}</span>
       </p>
     </aside>
   );

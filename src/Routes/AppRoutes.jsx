@@ -11,8 +11,9 @@ const AppRoutes = () => {
   const routes = useRoutes([
     { path: '/', element: <Home /> },
     { path: '/all', element: <Home /> },
-    { path: '/slim3', element: <CategoryFilter />},
-    { path: '/slim5', element: <CategoryFilter />},
+    { path: '/ideapad', element: <CategoryFilter />},
+    { path: '/SLIM3', element: <CategoryFilter />},
+    { path: '/SLIM5', element: <CategoryFilter />},
     { path: '/BI_AUDI_ALKOS', element: <CategoryFilter /> },
     { path: '/BI_CAMA_ALKOS', element: <CategoryFilter /> },
     { path: '/BI_CELU_ALKOS', element: <CategoryFilter /> },

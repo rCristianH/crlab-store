@@ -6,6 +6,8 @@ import { CamList } from './API/Camaras';
 import { pcsList } from './API/PC';
 import { SmartPhonesList } from './API/Smartphones';
 import { VideoGames } from './API/VideoGames';
+import { IdeapadList } from './API/Ideapad';
+
 
 /**
  * Custom Hook para obtener productos desde una API y almacenarlos en localStorage.
@@ -26,7 +28,10 @@ const useFetchProducts = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const spreadArray = [...AudioList, ...CamList, ...pcsList, ...SmartPhonesList, ...VideoGames]
+    const spreadArray = [
+      ...IdeapadList
+    ]
+    /* const spreadArray = [...AudioList, ...CamList, ...pcsList, ...SmartPhonesList, ...VideoGames] */
     setItems(spreadArray)
 
     /* const fetchData = async () => {
