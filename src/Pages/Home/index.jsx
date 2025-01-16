@@ -27,7 +27,7 @@ const Home = () => {
     return <p>Cargando productos</p>
   }
 
-  const allItems = [...items[0]["SLIM3"],...items[0]["SLIM5"]]
+  const allItems = [...items]
   /**
    * Manejador para cambios en el campo de búsqueda.
    * Actualiza el término de búsqueda y activa el modo de búsqueda si hay un texto ingresado.

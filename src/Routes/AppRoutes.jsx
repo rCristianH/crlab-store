@@ -6,12 +6,13 @@ import { MyOrders } from '../Pages/MyOrders';
 import { SignIn } from '../Pages/SingIn';
 import { NotFound } from '../Pages/NotFound';
 import { CategoryFilter } from '../Pages/Categories';
+import { Serie } from '../Pages/Serie';
 
 const AppRoutes = () => {
   const routes = useRoutes([
     { path: '/', element: <Home /> },
     { path: '/all', element: <Home /> },
-    { path: '/ideapad', element: <CategoryFilter />},
+    { path: '/ideapad', element: <Serie />},
     { path: '/SLIM3', element: <CategoryFilter />},
     { path: '/SLIM5', element: <CategoryFilter />},    
     { path: '/BI_AUDI_ALKOS', element: <CategoryFilter /> },

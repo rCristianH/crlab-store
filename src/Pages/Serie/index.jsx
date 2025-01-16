@@ -5,18 +5,19 @@ import { Layout } from "../../Components/Layout";
 import { Card } from "../../Components/Card";
 import { ProductDetail } from "../../Components/ProductDetail";
 
-const CategoryFilter = () => {
+const Serie = () => {
 
   const [searchMode, setSearchMode] = useState(false);
   const { items, setArgSearch, filteredItems } = useContext(ShoppingCartContext)
   const [filteredCategoryItems, setFilteredCategoryItems] = useState([]);
 
-  if(!items || items.length === 0){
+  if (!items || items.length === 0) {
     return <p>Cargando productos</p>
   }
 
-  const category = getLastPathSetment()
-  const categoryItems = items.filter(i=>i.ref==category);
+  const category = getLastPathSetment();
+  const categoryItems = items.filter(item => item.shortSerie === category);
+  console.log("🧪 ~ Serie ~ categoryItems:", items[0])
 
   const handleSearchChange = (e) => {
     const arg = e.target.value;
@@ -61,5 +62,7 @@ const CategoryFilter = () => {
     </Layout>
   );
 
+
 }
-export { CategoryFilter }
+
+export { Serie }
