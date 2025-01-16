@@ -19,6 +19,7 @@ import { ShoppingCartContext } from '../../Context';  // Contexto del carrito de
 const Home = () => {
   // Accede a `items` (todos los productos), `setArgSearch` (para filtrar), y `filteredItems` (productos filtrados) desde el contexto
   const { items, setArgSearch, filteredItems } = useContext(ShoppingCartContext);
+  const allItems = [...items[0]["SLIM3"],...items[0]["SLIM5"]]
 
   // Estado local para controlar si la búsqueda está activa o no
   const [searchMode, setSearchMode] = useState(false);
@@ -50,12 +51,13 @@ const Home = () => {
    * @param {Array} itemsList - Lista de productos a renderizar
    * @returns {JSX.Element} - Lista de componentes `Card` o un mensaje de error
    */
+  
   const renderItems = (itemsList) => {
     if (!itemsList || itemsList.length === 0) {
       return <p className='font-semibold' onClick={clearSearch}>Opps, Nothing found!!</p>;  // Muestra mensaje si no hay resultados
     }
     return itemsList?.map((item) => (
-      <Card key={item.code_string} data={item} />  // Renderiza cada producto usando el componente `Card`
+      <Card key={item.id} data={item} />  // Renderiza cada producto usando el componente `Card`
     ));
   };
 
@@ -74,12 +76,12 @@ const Home = () => {
       </div>
       
       {/* Lista de productos */}
-      {/* <div className="mt-5 grid gap-4 grid-cols-4 justify-items-center w-full max-w-screen-lg max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1">
-        {searchMode ? renderItems(filteredItems) : renderItems(items)}  
-      </div> */}
+      <div className="mt-5 grid gap-4 grid-cols-4 justify-items-center w-full max-w-screen-lg max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1">
+        {searchMode ? renderItems(filteredItems) : renderItems(allItems)}  
+      </div>
       
       {/* Detalle del producto */}
-      {/* <ProductDetail /> */}
+      <ProductDetail />
     </Layout>
   );
 };
