@@ -33,7 +33,7 @@ const ProductDetail = () => {
       className={`${isProductDetailOpen ? 'flex' : 'hidden'} overflow-auto mr-1 product-detail flex-col fixed right-0 h-99 border-2 border-black rounded-lg bg-white`}
     >
       <div className="flex justify-between items-center p-8">
-        <h2 className="font-medium text-xl">Detail</h2>
+        <h2 className="font-medium text-xl">{title}</h2>
         <MdClose className='cursor-pointer bg-black text-white h-6 w-6 rounded-full' onClick={() => closeProductDetail()} />
       </div>
       {images && images.length > 0 ? (
@@ -45,13 +45,13 @@ const ProductDetail = () => {
               alt={title}
             />
             <button
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-2xl"
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-2xl"
               onClick={handlePrevImage}
             >
               <img src={images[(currentImageIndex - 1 + images.length) % images.length]} alt="Prev" className="w-8 h-8 rounded-lg" />
             </button>
             <button
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-2xl"
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-2xl"
               onClick={handleNextImage}
             >
               <img src={images[(currentImageIndex + 1) % images.length]} alt="Next" className="w-8 h-8 rounded-lg" />

@@ -19,7 +19,7 @@
 const TotalPrice = (cartProducts) => {
   return Math.round(
     cartProducts.reduce((total, product) => {
-      return total + (product.pricevalue_cop_double * product.amount);
+      return total + (product.price * product.amount);
     }, 0) * 100
   ) / 100;
 }

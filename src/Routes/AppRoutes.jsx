@@ -15,6 +15,7 @@ const AppRoutes = () => {
     { path: '/ideapad', element: <Serie />},
     { path: '/SLIM3', element: <CategoryFilter />},
     { path: '/SLIM5', element: <CategoryFilter />},    
+    { path: '/thinkbook', element: <Serie />},
     { path: '/BI_AUDI_ALKOS', element: <CategoryFilter /> },
     { path: '/BI_CAMA_ALKOS', element: <CategoryFilter /> },
     { path: '/BI_CELU_ALKOS', element: <CategoryFilter /> },

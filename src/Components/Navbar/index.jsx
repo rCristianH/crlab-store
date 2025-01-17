@@ -11,7 +11,7 @@ const Navbar = () => {
   //here by basename
   serviceWorker()
   const { count, toggleProductCart } = useContext(ShoppingCartContext);
-  const activeStyle = 'underline underline-offset-4 decoration-green-700';
+  const activeStyle = 'underline underline-offset-4 decoration-indigo-950 rounded';
 
   const [animate, setAnimate] = useState(false);
   useEffect(() => {
@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light">
-      <ul className="flex items-center gap-4">
+      <ul className="flex items-center gap-4 ">
         <li className="font-semibold text-lg">
           <NavLink to="/">CR</NavLink>
         </li>
@@ -46,6 +46,11 @@ const Navbar = () => {
         <li>
           <NavbarItem activeStyle={activeStyle} to="/SLIM5">
             Slim 5
+          </NavbarItem>
+        </li>
+        <li>
+          <NavbarItem activeStyle={activeStyle} to="/ThinkBook">
+            ThinkBook
           </NavbarItem>
         </li>
         {/* <li>

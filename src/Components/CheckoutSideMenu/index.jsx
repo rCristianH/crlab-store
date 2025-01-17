@@ -77,7 +77,7 @@ const ChekoutSideMenu = () => {
       </div>
       {
         cartProducts.map(p => (
-          <OrderCard key={p.code_string} code_string={p.code_string} name_text_es={p.name_text_es} pricevalue_cop_double={p.pricevalue_cop_double} imgUrl={p['img-750wx750h_string']} amount={p.amount} removeProduct={removeProduct} />
+          <OrderCard key={p.id} id={p.id} title={p.title} price={p.price} images={p.images} amount={p.amount} removeProduct={removeProduct} />
         ))
       }
       <div className='fixed flex justify-evenly mx-4 mt-6 w-72 bottom-14 p-2 rounded-lg'>

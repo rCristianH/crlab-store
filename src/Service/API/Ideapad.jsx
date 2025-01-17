@@ -32,7 +32,7 @@ const IdeapadList = [
     "price": 2050000,
     "cpu": "AMD Ryzen™ 5 7520U",
     "logoBrandCPU": "https://imgur.com/w0mkA3c.png",
-    "logoCpu": "https://i.imgur.com/AkrWerl.jpeg",
+    "logoCpu": "https://imgur.com/AkrWerl.jpeg",
     "ram": "16 GB LPDDR5-5500MHz",
     "images": [
       "https://p1-ofp.static.pub/fes/cms/2022/12/09/wl57o6uv41lwkq1zah6pkt22ihvrp8950736.png",
@@ -78,7 +78,7 @@ const IdeapadList = [
     "price": 1800000,
     "cpu": "AMD Ryzen™ 5 7520U",
     "logoBrandCPU": "https://imgur.com/w0mkA3c.png",
-    "logoCpu": "https://i.imgur.com/AkrWerl.jpeg",
+    "logoCpu": "https://imgur.com/AkrWerl.jpeg",
     "ram": "8 GB LPDDR5-5500MHz",
     "images": [
       "https://p1-ofp.static.pub/fes/cms/2022/12/09/wl57o6uv41lwkq1zah6pkt22ihvrp8950736.png",
