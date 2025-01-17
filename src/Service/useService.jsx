@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useLocalStorage } from './useLocalStorage';  // Importa el hook de localStorage
 import { IdeapadList } from './API/Ideapad';
-import {ThinkBookList} from './API/ThinkBook'
+import { ThinkBookList } from './API/ThinkBook'
+import { LenovoTabList } from './API/Tab';
 
 
 /**
@@ -24,7 +25,7 @@ const useFetchProducts = () => {
 
   useEffect(() => {
     const spreadArray = [
-      ...IdeapadList, ...ThinkBookList
+      ...IdeapadList, ...ThinkBookList, ...LenovoTabList
     ]
     setItems(spreadArray)
 

@@ -27,7 +27,7 @@ const Home = () => {
     return <p>Cargando productos</p>
   }
 
-  const allItems = [...items]
+  const allItems = items.filter(i=>i.selected == true)
   /**
    * Manejador para cambios en el campo de búsqueda.
    * Actualiza el término de búsqueda y activa el modo de búsqueda si hay un texto ingresado.
@@ -84,8 +84,7 @@ const Home = () => {
         {searchMode ? renderItems(filteredItems) : renderItems(allItems)}  
       </div>
       
-      {/* Detalle del producto
-      <ProductDetail /> */}
+      <ProductDetail />
     </Layout>
   );
 };
