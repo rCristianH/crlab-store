@@ -1,6 +1,7 @@
 const IdeapadList = [
   {
     "id": "IS314AR3",
+    "selected": false,
     "available": true,
     "family": "Lenovo Ideapad",
     "shortSerie": "Ideapad",
@@ -11,6 +12,7 @@ const IdeapadList = [
     "logoBrandCPU": "https://i.imgur.com/w0mkA3c.png",
     "logoCpu": "https://i.imgur.com/bSdcWWd.jpeg",
     "ram": "8 GB LPDDR5-5500MHz",
+    "storage": "512 GB SSD M.2 2242 PCIe TLC",
     "images": [
       "https://p1-ofp.static.pub/fes/cms/2022/12/09/wl57o6uv41lwkq1zah6pkt22ihvrp8950736.png",
       "https://p1-ofp.static.pub/fes/cms/2022/12/09/eluleo8r9wdf4fp609a02wcs6elvvs288133.png",
@@ -24,6 +26,7 @@ const IdeapadList = [
   },
   {
     "id": "IS314AR5",
+    "selected": false,
     "available": true,
     "family": "Lenovo Ideapad",
     "shortSerie": "Ideapad",
@@ -34,6 +37,7 @@ const IdeapadList = [
     "logoBrandCPU": "https://i.imgur.com/w0mkA3c.png",
     "logoCpu": "https://i.imgur.com/AkrWerl.jpeg",
     "ram": "16 GB LPDDR5-5500MHz",
+    "storage": "512 GB SSD M.2 2242 PCIe TLC",
     "images": [
       "https://p1-ofp.static.pub/fes/cms/2022/12/09/wl57o6uv41lwkq1zah6pkt22ihvrp8950736.png",
       "https://p1-ofp.static.pub/fes/cms/2022/12/09/eluleo8r9wdf4fp609a02wcs6elvvs288133.png",
@@ -47,6 +51,7 @@ const IdeapadList = [
   },
   {
     "id": "IS315AR3",
+    "selected": false,
     "available": true,
     "family": "Lenovo Ideapad",
     "shortSerie": "Ideapad",
@@ -57,6 +62,7 @@ const IdeapadList = [
     "logoBrandCPU": "https://i.imgur.com/w0mkA3c.png",
     "logoCpu": "https://i.imgur.com/bSdcWWd.jpeg",
     "ram": "8 GB LPDDR5-5500MHz",
+    "storage": "512 GB SSD M.2 2242 PCIe TLC",
     "images": [
       "https://p1-ofp.static.pub/fes/cms/2022/12/09/wl57o6uv41lwkq1zah6pkt22ihvrp8950736.png",
       "https://p1-ofp.static.pub/fes/cms/2022/12/09/eluleo8r9wdf4fp609a02wcs6elvvs288133.png",
@@ -70,6 +76,7 @@ const IdeapadList = [
   },
   {
     "id": "IS315AR5",
+    "selected": false,
     "available": true,
     "family": "Lenovo Ideapad",
     "shortSerie": "Ideapad",
@@ -80,6 +87,7 @@ const IdeapadList = [
     "logoBrandCPU": "https://i.imgur.com/w0mkA3c.png",
     "logoCpu": "https://i.imgur.com/AkrWerl.jpeg",
     "ram": "8 GB LPDDR5-5500MHz",
+    "storage": "512 GB SSD M.2 2242 PCIe TLC",
     "images": [
       "https://p1-ofp.static.pub/fes/cms/2022/12/09/wl57o6uv41lwkq1zah6pkt22ihvrp8950736.png",
       "https://p1-ofp.static.pub/fes/cms/2022/12/09/eluleo8r9wdf4fp609a02wcs6elvvs288133.png",
@@ -93,6 +101,7 @@ const IdeapadList = [
   },
   {
     "id": "IS315AR7",
+    "selected": false,
     "available": true,
     "family": "Lenovo Ideapad",
     "shortSerie": "Ideapad",
@@ -103,6 +112,7 @@ const IdeapadList = [
     "logoBrandCPU": "https://i.imgur.com/w0mkA3c.png",
     "logoCpu": "https://i.imgur.com/1jffKoA.jpeg",
     "ram": "16 GB DDR4-3200MHz",
+    "storage": "512 GB SSD M.2 2242 PCIe QLC",
     "images": [
       "https://p1-ofp.static.pub/fes/cms/2022/12/09/wl57o6uv41lwkq1zah6pkt22ihvrp8950736.png",
       "https://p1-ofp.static.pub/fes/cms/2022/12/09/eluleo8r9wdf4fp609a02wcs6elvvs288133.png",
@@ -116,6 +126,7 @@ const IdeapadList = [
   },
   {
     "id": "IS315IC3",
+    "selected": false,
     "available": true,
     "family": "Lenovo Ideapad",
     "shortSerie": "Ideapad",
@@ -126,6 +137,7 @@ const IdeapadList = [
     "logoBrandCPU": "https://i.imgur.com/8oHRHNY.png",
     "logoCpu": "https://i.imgur.com/fWpEXUk.jpeg",
     "ram": "8 GB LPDDR5-4800MHz",
+    "storage": "",
     "images": [
       "https://p1-ofp.static.pub/fes/cms/2022/12/09/wl57o6uv41lwkq1zah6pkt22ihvrp8950736.png",
       "https://p1-ofp.static.pub/fes/cms/2022/12/09/eluleo8r9wdf4fp609a02wcs6elvvs288133.png",
@@ -139,6 +151,7 @@ const IdeapadList = [
   },
   {
     "id": "IS315IC5",
+    "selected": false,
     "available": true,
     "family": "Lenovo Ideapad",
     "shortSerie": "Ideapad",
@@ -149,6 +162,7 @@ const IdeapadList = [
     "logoBrandCPU": "https://i.imgur.com/8oHRHNY.png",
     "logoCpu": "https://i.imgur.com/S2WUFqN.jpeg",
     "ram": "16 GB LPDDR5-4800MHz",
+    "storage": "512 GB SSD M.2 2242 PCIe Gen4 TLC",
     "images": [
       "https://p1-ofp.static.pub/fes/cms/2022/12/09/wl57o6uv41lwkq1zah6pkt22ihvrp8950736.png",
       "https://p1-ofp.static.pub/fes/cms/2022/12/09/eluleo8r9wdf4fp609a02wcs6elvvs288133.png",
@@ -162,6 +176,7 @@ const IdeapadList = [
   },
   {
     "id": "IS316IC5",
+    "selected": false,
     "available": true,
     "family": "Lenovo Ideapad",
     "shortSerie": "Ideapad",
@@ -172,6 +187,7 @@ const IdeapadList = [
     "logoBrandCPU": "https://i.imgur.com/8oHRHNY.png",
     "logoCpu": "https://i.imgur.com/S2WUFqN.jpeg",
     "ram": "8 GB LPDDR5-4800MHz",
+    "storage": "512 GB SSD M.2 2242 PCIe Gen4 TLC",
     "images": [
       "https://p1-ofp.static.pub//medias/25730676944_CG_MEALNP_202304120105021694841498625.png",
       "https://p4-ofp.static.pub/fes/cms/2022/12/05/2fe836g93vaehq5bqefyr5n3uryldg141098.png",
@@ -183,6 +199,7 @@ const IdeapadList = [
   },
   {
     "id": "IS316IC51TB",
+    "selected": false,
     "available": true,
     "family": "Lenovo Ideapad",
     "shortSerie": "Ideapad",
