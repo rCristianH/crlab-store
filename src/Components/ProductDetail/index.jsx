@@ -16,6 +16,7 @@ const ProductDetail = () => {
     ram,
     images,
     logoBrandCPU,
+    storage,
     logoCpu, } = productToShow;
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -67,6 +68,7 @@ const ProductDetail = () => {
         <span className="font-medium text-md">{title}</span>
         <span className="font-light text-sm">{cpu}</span>
         <span className="font-light text-sm">RAM {ram}</span>
+        <span className="font-light text-sm">{storage}</span>
       </p>
     </aside>
   );
