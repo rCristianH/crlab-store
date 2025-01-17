@@ -8,8 +8,8 @@ const ThinkBookList = [
     "ref": "THINKBOOK",
     "price": 3800000,
     "cpu": "AMD Ryzen™ 5 7535HS",
-    "logoBrandCPU": "https://imgur.com/w0mkA3c.png",
-    "logoCpu": "https://imgur.com/AkrWerl.jpeg",
+    "logoBrandCPU": "https://i.imgur.com/w0mkA3c.png",
+    "logoCpu": "https://i.imgur.com/AkrWerl.jpeg",
     "ram": "16 GB DDR5-4800MHz (SODIMM)",
     "storage": "512 GB SSD M.2 2242 PCIe Gen4 TLC",
     "images": [
