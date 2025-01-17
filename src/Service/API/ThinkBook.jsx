@@ -1,6 +1,7 @@
 const ThinkBookList = [
   {
     "id": "TB16AR5",
+    "selected": false,
     "available": true,
     "family": "Lenovo ThinkBook",
     "shortSerie": "ThinkBook",
