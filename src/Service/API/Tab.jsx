@@ -1,5 +1,4 @@
 const LenovoTabList = [
-
   {
     "id": "LTK11MHG88",
     "selected": true,
@@ -56,7 +55,7 @@ const LenovoTabList = [
       "https://p3-ofp.static.pub//fes/cms/2024/12/02/z8jhswaezntx4c1k7d2uh7u9eufaf1151426.png",
       "https://p2-ofp.static.pub//fes/cms/2024/12/02/hcf4i1f91p7dzyc3erd9qpkw8pradk465344.png",
     ]
-  },
+    },
    {
     "id": "LTP115MHG99",
     "selected": true,
@@ -71,7 +70,7 @@ const LenovoTabList = [
     "logoCpu": "https://www.mediatek.com/hubfs/MediaTek%20Assets/Images/ChipSets/Helio-G99@1.25x.png",
     "ram": "8 GB LPDDR4X",
     "storage": "128 GB UFS 2.2",
-    "screen": '11,5" 2K (2000 x 1200), IPS, 400 nits, 10 points'
+    "screen": '11,5" 2K (2000 x 1200), IPS, 400 nits, 10 points',
     "images": [
       "https://p1-ofp.static.pub/medias/26372316901_PlusTab_202403050226511723454339938.png",
       "https://p1-ofp.static.pub//fes/cms/2024/04/02/ey6fmunxacyzkiex211h4ncrsnnhdz030351.png",
@@ -85,6 +84,6 @@ const LenovoTabList = [
       "https://p2-ofp.static.pub//fes/cms/2024/04/02/u5y7j0mm58r5jwek2aoqkx8c9v2urn373320.png",
       "https://p2-ofp.static.pub//fes/cms/2024/04/02/h7goeqt63mfqhm8i1ztyebykqyq0li664855.png",
     ]
-  },
+  }
 ]
 export { LenovoTabList }
