@@ -26,7 +26,7 @@ const IdeapadList = [
   },
   {
     "id": "IS314AR5",
-    "selected": true,
+    "selected": false,
     "available": true,
     "family": "Lenovo Ideapad",
     "shortSerie": "Ideapad",
@@ -101,7 +101,7 @@ const IdeapadList = [
   },
   {
     "id": "IS315AR7",
-    "selected": true,
+    "selected": false,
     "available": true,
     "family": "Lenovo Ideapad",
     "shortSerie": "Ideapad",
@@ -176,7 +176,7 @@ const IdeapadList = [
   },
   {
     "id": "IS316IC5",
-    "selected": true,
+    "selected": false,
     "available": true,
     "family": "Lenovo Ideapad",
     "shortSerie": "Ideapad",
