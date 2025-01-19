@@ -1,7 +1,7 @@
 const LenovoTabList = [
   {
     "id": "LTK11MHG88",
-    "selected": true,
+    "selected": false,
     "available": true,
     "family": "Lenovo Tab",
     "shortSerie": "Tab K11",
@@ -58,7 +58,7 @@ const LenovoTabList = [
     },
    {
     "id": "LTP115MHG99",
-    "selected": true,
+    "selected": false,
     "available": true,
     "family": "Lenovo Tab",
     "shortSerie": "Tab Plus",
