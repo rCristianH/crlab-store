@@ -93,5 +93,6 @@ export default defineConfig(({ command, mode }) => {
         },
       }),
     ],
+    server
   };
 });
