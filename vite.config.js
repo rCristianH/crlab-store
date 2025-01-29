@@ -93,6 +93,8 @@ export default defineConfig(({ command, mode }) => {
         },
       }),
     ],
-    server
+    server: {
+      historyApiFallback: true,
+    }
   };
 });
