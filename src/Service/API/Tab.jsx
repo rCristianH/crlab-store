@@ -33,6 +33,9 @@ const LenovoTabList = [
     "shortSerie": "Tab Pro",
     "title": "Lenovo Tab Pro + Teclado, Lápiz",
     "ref": "TAB",
+    "clients": [
+      "02CP",
+    ],
     "price": 1990000,
     "cpu": "MediaTek Dimensity 8300",
     "logoBrandCPU": "https://www.mediatek.com/hubfs/raw_assets/public/MediaTek_Mar_2024/images/mediatek-logo.svg",

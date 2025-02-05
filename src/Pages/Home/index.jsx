@@ -6,11 +6,12 @@
  * y utiliza el contexto de `ShoppingCartContext` para acceder a los productos y la funcionalidad de búsqueda.
  */
 
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Card } from '../../Components/Card';  // Componente para mostrar información de un producto individual
 import { Layout } from '../../Components/Layout';  // Componente para el diseño principal de la página
 import { ProductDetail } from '../../Components/ProductDetail';  // Componente para mostrar detalles de un producto seleccionado
 import { ShoppingCartContext } from '../../Context';  // Contexto del carrito de compras
+import { useLocation } from 'react-router-dom';
 
 /**
  * Componente `Home` que representa la página de inicio.
@@ -19,15 +20,32 @@ import { ShoppingCartContext } from '../../Context';  // Contexto del carrito de
 const Home = () => {
   // Accede a `items` (todos los productos), `setArgSearch` (para filtrar), y `filteredItems` (productos filtrados) desde el contexto
   const { items, setArgSearch, filteredItems } = useContext(ShoppingCartContext);
+  const [category, setCategory] = useState('');
+  const location = useLocation();
   
   // Estado local para controlar si la búsqueda está activa o no
   const [searchMode, setSearchMode] = useState(false);
-  
+
+  useEffect(() => {
+    const hashSearch = location.hash;
+    if (hashSearch.startsWith('#/search/')) {
+      const searchParam = hashSearch.replace('#/search/', '');
+      setArgSearch(searchParam);
+      setSearchMode(true);
+    }
+    const hash = location.hash.replace('#/', '');
+    setCategory(hash)
+  }, [location])
+
   if(!items || items.length === 0){
     return <p>Cargando productos</p>
   }
 
-  const allItems = items.filter(i=>i.selected == true)
+  //const allItems = items.filter(i=>i.selected == true)
+  
+
+  const allItems = category ? items.filter(i => i.clients?.includes(category)) : items;
+  
   /**
    * Manejador para cambios en el campo de búsqueda.
    * Actualiza el término de búsqueda y activa el modo de búsqueda si hay un texto ingresado.
@@ -36,9 +54,14 @@ const Home = () => {
    */
   const handleSearchChange = (e) => {
     const arg = e.target.value;
+    window.location.hash = `#/search/${arg}`;
     setArgSearch(arg);  // Actualiza el término de búsqueda en el contexto
+    if (arg === "") {
+      window.location.hash = "";
+    }
     setSearchMode(arg !== "");  // Activa el modo de búsqueda si hay un término
   };
+  
 
   /**
    * Limpia el campo de búsqueda y desactiva el modo de búsqueda.

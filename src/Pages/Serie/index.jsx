@@ -17,7 +17,6 @@ const Serie = () => {
 
   const category = getLastPathSetment();
   const categoryItems = items.filter(item => item.shortSerie === category);
-  console.log("🧪 ~ Serie ~ categoryItems:", items[0])
 
   const handleSearchChange = (e) => {
     const arg = e.target.value;

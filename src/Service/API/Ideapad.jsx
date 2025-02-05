@@ -82,6 +82,9 @@ const IdeapadList = [
     "shortSerie": "Ideapad",
     "title": "Slim 3 15 AMD R5",
     "ref": "SLIM3",
+    "clients": [
+      "02CP",
+    ],
     "price": 1800000,
     "cpu": "AMD Ryzen™ 5 7520U",
     "logoBrandCPU": "https://i.imgur.com/w0mkA3c.png",
