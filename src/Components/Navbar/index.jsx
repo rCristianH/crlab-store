@@ -1,5 +1,5 @@
 import "./styles.css"
-import { MdOutlineShoppingCart, MdCrueltyFree } from 'react-icons/md';
+import { MdCrueltyFree } from 'react-icons/md';
 import { NavbarItem } from '../NavbarItem/NavbarItem';
 import { NavLink } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
@@ -37,7 +37,7 @@ const Navbar = () => {
     <nav className="flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light">
       <ul className="flex items-center gap-4 ">
         <li
-          className="font-semibold text-lg">
+          className="font-semibold text-lg px-1 rounded-xl shadow">
           <NavLink to="/">CR</NavLink>
         </li>
         <li>

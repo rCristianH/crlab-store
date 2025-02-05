@@ -56,7 +56,7 @@ const Card = (data) => {
 
   return (
     <div
-      className="bg-white relative cursor-pointer w-56 aspect-[3/4] rounded-lg border-2 border-gray-900 mb-4"
+      className="bg-white relative cursor-pointer w-56 aspect-[3/4] rounded-lg border-2 border-gray-900 mb-4 shadow-xl"
     >
       <figure className="relative flex items-center justify-center mb-2 w-full h-4/5 p-2" >
         <span className="border-2 border-gray-700 absolute -top-5 left-2 bg-white rounded-lg text-black text-xs m-2 px-3 py-0.5">

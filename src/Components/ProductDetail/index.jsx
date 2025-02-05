@@ -35,7 +35,7 @@ const ProductDetail = () => {
     >
       <div className="flex justify-between items-center p-8">
         <h2 className="font-medium text-xl">{title}</h2>
-        <MdClose className='cursor-pointer bg-black text-white h-6 w-6 rounded-full' onClick={() => closeProductDetail()} />
+        <MdClose className='cursor-pointer shadow bg-black text-white h-6 w-6 rounded-full' onClick={() => closeProductDetail()} />
       </div>
       {images && images.length > 0 ? (
         <figure className="">

@@ -35,7 +35,12 @@ const Home = () => {
     }
     const hash = location.hash.replace('#/', '');
     setCategory(hash)
+    if (hash === "") {
+      setArgSearch("");
+      setSearchMode(false);
+    }
   }, [location])
+  console.log("🧪 ~ Home ~ location:", location)
 
   if(!items || items.length === 0){
     return <p>Cargando productos</p>
