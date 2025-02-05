@@ -26,3 +26,16 @@ body::-webkit-scrollbar-thumb{
   background-color: black;
   border-radius: 3px;
 }
+.shadow {
+  box-shadow:
+    -5px -5px 9px rgba(255, 255, 255, 0.45),
+    5px 5px 9px rgba(94, 104, 121, 0.3);
+}
+.shadow:hover {
+  box-shadow:
+    -3px -3px 9px rgba(255, 255, 255, 0.45),
+    3px 3px 9px rgba(94, 104, 121, 0.6);
+  scale: 1.05;
+  transition: scale 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+}
